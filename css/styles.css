@@ -1,0 +1,644 @@
+/* ========== Global Styles ========== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7ff;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  input[disabled] {
+    background-color: #f0f0f0;
+    color: #666;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3f51b5;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .button:hover {
+    background-color: #303f9f;
+  }
+  
+  .action-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3f51b5;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .action-button:hover {
+    background-color: #303f9f;
+  }
+  
+  .note {
+    font-size: 14px;
+    color: #666;
+    margin-top: 15px; /* Final declared margin-top was 15px */
+  }
+  
+  .note a {
+    color: #3f51b5;
+    text-decoration: none;
+  }
+  
+  .note a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ========== Header & Navigation ========== */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for visual appeal */
+}
+  
+  header .logo {
+    flex-shrink: 0; /* Prevent shrinking */
+  }
+
+  header .logo img {
+    max-width: 100px; /* Limit the width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center alignment inside its container */
+    margin: 0 auto; /* Optional if needed */
+}
+  
+  /* Header Container Styling */
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Navigation Links Styling */
+  .nav-links {
+    display: flex;
+    gap: 30px; /* Increased spacing between links */
+    margin-left: 20px; /* Space between the logo and links */
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px; /* Increased font size */
+    font-weight: bold; /* Added bold styling */
+    letter-spacing: 1.5px; /* Added letter spacing for visual appeal */
+    text-transform: uppercase; /* Makes the text uppercase */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  .nav-links a:hover {
+    color: #ffeb3b; /* Changed hover color to a bright yellow */
+    text-decoration: none; /* Remove underline on hover */
+  }
+
+  nav {
+      display: flex;
+      gap: 15px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .banner {
+    height: 150px;
+    background-color: #5c6bc0;
+  }
+  
+  /* ========== Footer ========== */
+  .footer {
+    text-align: center;
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+
+  .footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s; /* Smooth transition effects */
+  }
+
+  .footer a:hover {
+      color: #ffeb3b; /* Bright yellow for hover */
+      text-decoration: none; /* Add underline */
+      transform: scale(1.1); /* Slightly enlarge the text */
+  }
+  
+  /* ========== Container (general) ========== */
+  .container {
+    padding: 20px;
+  }
+
+  .container h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: left; /* Aligns the text to match the post card */
+    margin-left: 10px; /* Adjust this value to match the left padding of the card */
+  }
+
+  /* ========== About Us Page ========== */
+  .about-us-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .about-us-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .about-us-text {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-us-text h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .about-us-text p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  .about-us-images {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .about-us-images img {
+    width: 100%;
+    height: 190px; /* Set a uniform height */
+    object-fit: cover; /* Ensures images fit within the specified height and width */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ========== Common "Welcome" Title ========== */
+  .welcome {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* ========== Account Card / Login Card / Signup Card ========== */
+    .account-card,
+    .login-card,
+    .signup-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    
+    .account-card form,
+    .login-card form,
+    .signup-card form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: left; /* Some forms had text-align: left inside */
+    }
+
+    .login-card input, .signup-card input {
+      width: calc(100% - 20px); /* Adjust width to account for padding */
+      box-sizing: border-box; /* Include border and padding in width calculation */
+      margin: 0 auto; /* Center alignment */
+  }
+    
+  /* ========== Country Page ========== */
+  .country-header,
+  .country-name {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .search-and-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-and-buttons input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 50%;
+    max-width: 300px;
+  }
+  
+  /* ========== Posts Section (Scrolling Lists, etc.) ========== */
+  .posts-section {
+    margin-top: 20px;
+  }
+  
+  .posts-section h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .posts-scrollable {
+    max-height: 200px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+  }
+  
+  .post-meta {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+  }
+  
+  /* ========== Individual Post Cards ========== */
+  .post-card {
+    background-color: transparent; /* Match the container's background color */
+    border: none;                 /* Remove the border */
+    padding: 10px;                /* Adjust padding for cleaner appearance */
+    margin-bottom: 10px;          /* Add spacing between posts */
+    text-align: left;
+    box-shadow: none;             /* Remove shadow */
+  }
+
+  .post-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit; /* Inherit text color */
+    background-color: white; /* White background */
+    border: 1px solid #ccc; /* Add border for separation */
+    border-radius: 5px;
+    padding: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .post-card-link:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* White overlay effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+    transform: scale(1.02); /* Slight scaling effect */
+  }
+
+  /* Posts Scrollable Container */
+  .posts-scrollable {
+    background-color: white; /* Remove contrasting background */
+    padding: 10px;
+    border-radius: 5px;
+    overflow-y: auto; /* Maintain scrolling functionality */
+  }
+
+  .post-card h3 {
+    margin: 0 0 10px; /* from the second usage */
+  }
+  
+  .post-card h4 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .post-card p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .post-meta {
+    font-size: 12px;
+    color: #999;
+  }
+  
+  /* ========== Create Post Form ========== */
+  .post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .post-header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .create-post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  #create-post-title,
+  #post-content {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  #post-content {
+    height: 200px;
+    overflow-y: scroll;
+  }
+  
+  .add-image-section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .add-image-button {
+    cursor: pointer;
+  }
+  
+  .add-image-button img {
+    width: 30px;
+    height: 30px;
+  }
+
+  #image-preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.image-preview {
+    height: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+  
+  /* ========== Individual Post Details Page ========== */
+  .post-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .post-image {
+    width: 600px;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px; /* Adds spacing between the picture and the text */
+    vertical-align: middle; /* Aligns the image with the text */
+    object-fit: cover; /* Ensures the image covers the circle nicely */
+  }
+
+  .author-info {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between profile picture and text */
+    text-align: right;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between the Back button and the author info */
+  }
+  
+  .author-info {
+    display: flex;
+    align-items: center;
+    background-color: white; /* White overlay */
+    padding: 10px 15px;
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .author-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+  }
+
+  .author-text {
+    margin-left: 10px; /* Add spacing between profile picture and text */
+  }
+  
+  .post-content-scrollable {
+    max-height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+  }
+  
+  .post-content-scrollable p {
+    text-align: justify; /* Justifies the text */
+    line-height: 1.5; /* Sets line spacing to 1.5 */
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .post-overlay {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 20px; /* Adds space between the image and the text */
+    align-items: flex-start; /* Align image and text at the top */
+  }
+
+  .post-overlay p {
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+  }
+
+  /* ========== Home Page (Search & Trending) ========== */
+  .search-section input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+
+  /* Center the search bar */
+  .search-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .search-section input {
+    width: 80%;
+    max-width: 400px;
+  }
+
+/* Center the "TRENDING" text */
+.trending-section h3 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 10px;
+}
+  
+  .trending-section h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .trending-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .country-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3f51b5;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    min-width: 120px;
+  }
+  
+  .country-button:hover {
+    background-color: #303f9f;
+  }
+  
+
+  /* ========== Slideshow ========== */
+  .slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+  }
+
+  .slide:first-child {
+    opacity: 1;
+  }
+
+  .slide.active {
+    display: block;
+    opacity: 1; /* Make the active slide fully visible */
+  }
+
+  .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+  }
+
+  @keyframes fade {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
